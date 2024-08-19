@@ -1,9 +1,10 @@
-/.DS_Store
-/Doc Bug list
-/lwr.config.json
-/node_modules
-/package-lock.json
-/package.json
-/scripts
-/src
-/yarn.lock
+.DS_Store
+node_modules/
+package-lock.json
+yarn.lock
+__lwr_cache__/
+LWR Doc bug list.md
+src/assets/icons/
+src/assets/styles/
+src/assets/images/
+site/

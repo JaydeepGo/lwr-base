@@ -1,0 +1,63 @@
+{
+    "cacheDir": "$rootDir/__lwr_cache__",
+    "contentDir": "$rootDir/src/content",
+    "layoutsDir": "$rootDir/src/layouts",
+    "globalDataDir": "$rootDir/src/data",
+    "lwc": {
+        "modules": [
+            {
+                "dir": "$rootDir/src/modules"
+            },
+            {
+                "npm": "lightning-base-components"
+            }
+        ]
+    },
+    "port": 3333,
+    "routes": [
+        {
+            "id": "home",
+            "path": "/",
+            "contentTemplate": "$contentDir/home.md",
+            "layoutTemplate": "$layoutsDir/base.njk",
+            "bootstrap": {
+                "syntheticShadow": true
+            }
+        },
+        {
+            "id": "blog",
+            "path": "/blog",
+            "contentTemplate": "$layoutsDir/blog.html",
+            "layoutTemplate": "$layoutsDir/base.njk"
+        },
+        {
+            "id": "about",
+            "path": "/about",
+            "rootComponent": "example/app"
+        }
+    ],
+    "errorRoutes": [
+        {
+            "id": "not_found",
+            "status": 404,
+            "rootComponent": "example/notFound"
+        },
+        {
+            "id": "server_error",
+            "status": 500,
+            "contentTemplate": "$contentDir/home.md"
+        }
+    ],
+    "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/public/assets"
+        },
+        {
+            "alias": "favicon",
+            "file": "$rootDir/src/assets/images/favicon.ico",
+            "urlPath": "/favicon.ico"
+        }
+    ]
+}

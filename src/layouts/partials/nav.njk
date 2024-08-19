@@ -1,0 +1,8 @@
+<nav class="slds-p-top_medium" >
+    <ul class="slds-grid slds-wrap slds-text-align_center slds-p-top_medium ">
+        {{ data.global.author }}
+        {% for item in site.navbar %}
+        <li id="{{ item.id }}" class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-text-heading_large"><a href="{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>  
